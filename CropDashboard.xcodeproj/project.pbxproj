@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		071D8E17300425F00027669F /* LabelCardRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D8E16300425DD0027669F /* LabelCardRenderer.swift */; };
+		07391FA52FC555DE002C0C19 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07391FA42FC555CD002C0C19 /* MapView.swift */; };
+		07583DBE2FD7DF760022930C /* CropManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07583DBD2FD7DF690022930C /* CropManager.swift */; };
+		07583DC02FD7DF900022930C /* AddCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07583DBF2FD7DF800022930C /* AddCropView.swift */; };
+		07583DC52FDBE86F0022930C /* HealthDistributionChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07583DC42FDBE85F0022930C /* HealthDistributionChart.swift */; };
+		07583DC72FDBE8870022930C /* FarmTrendChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07583DC62FDBE87F0022930C /* FarmTrendChart.swift */; };
+		07583DCD2FDC03530022930C /* CropHealthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07583DCC2FDC034A0022930C /* CropHealthResponse.swift */; };
+		079DF4072FFF7CE2002088E7 /* PolygonTriangulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079DF4062FFF7CB5002088E7 /* PolygonTriangulator.swift */; };
+		079DF4092FFF7DBA002088E7 /* ARCoordinatorHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079DF4082FFF7DA3002088E7 /* ARCoordinatorHolder.swift */; };
+		07ED739B2FDFA52D00F6DD9F /* Farm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED739A2FDFA52600F6DD9F /* Farm.swift */; };
+		07ED739D2FDFA64900F6DD9F /* FarmOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED739C2FDFA62900F6DD9F /* FarmOverviewView.swift */; };
+		07ED739F2FDFA67500F6DD9F /* FarmCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED739E2FDFA66700F6DD9F /* FarmCardView.swift */; };
+		07ED73A62FE008A300F6DD9F /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED73A52FE0085300F6DD9F /* ARViewContainer.swift */; };
+		07ED73A82FE008BF00F6DD9F /* ZoneEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED73A72FE008B100F6DD9F /* ZoneEntity.swift */; };
+		07ED73AF2FE268C800F6DD9F /* ARCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED73AE2FE268B600F6DD9F /* ARCoordinator.swift */; };
+		07ED73B82FE2959B00F6DD9F /* ARFarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED73B72FE2958900F6DD9F /* ARFarmView.swift */; };
+		07ED73BA2FE2B23400F6DD9F /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED73B92FE2B23000F6DD9F /* Crop.swift */; };
+		07ED73BB2FE2C0E700F6DD9F /* zones.json in Resources */ = {isa = PBXBuildFile; fileRef = 07391FA22FC3E58D002C0C19 /* zones.json */; };
+		07F2C0612FBE366F00970A26 /* ZoneCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103DBD2FB73101007D2360 /* ZoneCardView.swift */; };
+		07F2C0622FBE367600970A26 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103DBB2FB730C3007D2360 /* DashboardViewModel.swift */; };
+		07F2C0642FBE369800970A26 /* ZoneDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103DBE2FB7311A007D2360 /* ZoneDetailView.swift */; };
+		07F2C0652FBE36A100970A26 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103DBC2FB730EC007D2360 /* DashboardView.swift */; };
+		07F2C0662FBE36A700970A26 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103DB92FB73075007D2360 /* DataService.swift */; };
+		07F2C0672FBE36AE00970A26 /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07103DB82FB73058007D2360 /* Zone.swift */; };
+		8908464918A145DB9FF8504E /* CropRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33D657D7E84411FA4F64E5E /* CropRowView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07103DA42FB6F304007D2360 /* CropDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07103DB82FB73058007D2360 /* Zone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
+		07103DB92FB73075007D2360 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		07103DBB2FB730C3007D2360 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		07103DBC2FB730EC007D2360 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		07103DBD2FB73101007D2360 /* ZoneCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneCardView.swift; sourceTree = "<group>"; };
+		D33D657D7E84411FA4F64E5E /* CropRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropRowView.swift; sourceTree = "<group>"; };
+		07103DBE2FB7311A007D2360 /* ZoneDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneDetailView.swift; sourceTree = "<group>"; };
+		071D8E16300425DD0027669F /* LabelCardRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCardRenderer.swift; sourceTree = "<group>"; };
+		07391FA22FC3E58D002C0C19 /* zones.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zones.json; sourceTree = "<group>"; };
+		07391FA42FC555CD002C0C19 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		07583DBD2FD7DF690022930C /* CropManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropManager.swift; sourceTree = "<group>"; };
+		07583DBF2FD7DF800022930C /* AddCropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCropView.swift; sourceTree = "<group>"; };
+		07583DC42FDBE85F0022930C /* HealthDistributionChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDistributionChart.swift; sourceTree = "<group>"; };
+		07583DC62FDBE87F0022930C /* FarmTrendChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmTrendChart.swift; sourceTree = "<group>"; };
+		07583DCC2FDC034A0022930C /* CropHealthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropHealthResponse.swift; sourceTree = "<group>"; };
+		079DF4062FFF7CB5002088E7 /* PolygonTriangulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonTriangulator.swift; sourceTree = "<group>"; };
+		079DF4082FFF7DA3002088E7 /* ARCoordinatorHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCoordinatorHolder.swift; sourceTree = "<group>"; };
+		07ED739A2FDFA52600F6DD9F /* Farm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Farm.swift; sourceTree = "<group>"; };
+		07ED739C2FDFA62900F6DD9F /* FarmOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmOverviewView.swift; sourceTree = "<group>"; };
+		07ED739E2FDFA66700F6DD9F /* FarmCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmCardView.swift; sourceTree = "<group>"; };
+		07ED73A52FE0085300F6DD9F /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		07ED73A72FE008B100F6DD9F /* ZoneEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneEntity.swift; sourceTree = "<group>"; };
+		07ED73AE2FE268B600F6DD9F /* ARCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCoordinator.swift; sourceTree = "<group>"; };
+		07ED73B72FE2958900F6DD9F /* ARFarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFarmView.swift; sourceTree = "<group>"; };
+		07ED73B92FE2B23000F6DD9F /* Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		07103DA62FB6F304007D2360 /* CropDashboard */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CropDashboard;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07103DA12FB6F304007D2360 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07103D9B2FB6F304007D2360 = {
+			isa = PBXGroup;
+			children = (
+				07103DB72FB6F43B007D2360 /* ViewModels */,
+				07103DB62FB6F379007D2360 /* Resources */,
+				07103DB52FB6F368007D2360 /* Views */,
+				07103DB32FB6F33E007D2360 /* Services */,
+				07103DB22FB6F320007D2360 /* Models */,
+				07103DA62FB6F304007D2360 /* CropDashboard */,
+				07103DA52FB6F304007D2360 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07103DA52FB6F304007D2360 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07103DA42FB6F304007D2360 /* CropDashboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07103DB22FB6F320007D2360 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07ED73B92FE2B23000F6DD9F /* Crop.swift */,
+				07ED739A2FDFA52600F6DD9F /* Farm.swift */,
+				07583DCC2FDC034A0022930C /* CropHealthResponse.swift */,
+				07103DB82FB73058007D2360 /* Zone.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07103DB32FB6F33E007D2360 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				07103DB92FB73075007D2360 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		07103DB52FB6F368007D2360 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07ED73A22FE0081F00F6DD9F /* AR */,
+				07ED739E2FDFA66700F6DD9F /* FarmCardView.swift */,
+				07ED739C2FDFA62900F6DD9F /* FarmOverviewView.swift */,
+				07583DC32FDBE8530022930C /* Charts */,
+				07583DBF2FD7DF800022930C /* AddCropView.swift */,
+				07391FA42FC555CD002C0C19 /* MapView.swift */,
+				07103DBE2FB7311A007D2360 /* ZoneDetailView.swift */,
+				07103DBD2FB73101007D2360 /* ZoneCardView.swift */,
+				07103DBC2FB730EC007D2360 /* DashboardView.swift */,
+				D33D657D7E84411FA4F64E5E /* CropRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		07103DB62FB6F379007D2360 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07391FA22FC3E58D002C0C19 /* zones.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07103DB72FB6F43B007D2360 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				07583DBD2FD7DF690022930C /* CropManager.swift */,
+				07103DBB2FB730C3007D2360 /* DashboardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		07583DC32FDBE8530022930C /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				07583DC62FDBE87F0022930C /* FarmTrendChart.swift */,
+				07583DC42FDBE85F0022930C /* HealthDistributionChart.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		07ED73A22FE0081F00F6DD9F /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				071D8E16300425DD0027669F /* LabelCardRenderer.swift */,
+				079DF4082FFF7DA3002088E7 /* ARCoordinatorHolder.swift */,
+				079DF4062FFF7CB5002088E7 /* PolygonTriangulator.swift */,
+				07ED73B72FE2958900F6DD9F /* ARFarmView.swift */,
+				07ED73AE2FE268B600F6DD9F /* ARCoordinator.swift */,
+				07ED73A72FE008B100F6DD9F /* ZoneEntity.swift */,
+				07ED73A52FE0085300F6DD9F /* ARViewContainer.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07103DA32FB6F304007D2360 /* CropDashboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07103DAF2FB6F306007D2360 /* Build configuration list for PBXNativeTarget "CropDashboard" */;
+			buildPhases = (
+				07103DA02FB6F304007D2360 /* Sources */,
+				07103DA12FB6F304007D2360 /* Frameworks */,
+				07103DA22FB6F304007D2360 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				07103DA62FB6F304007D2360 /* CropDashboard */,
+			);
+			name = CropDashboard;
+			packageProductDependencies = (
+			);
+			productName = CropDashboard;
+			productReference = 07103DA42FB6F304007D2360 /* CropDashboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07103D9C2FB6F304007D2360 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					07103DA32FB6F304007D2360 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 07103D9F2FB6F304007D2360 /* Build configuration list for PBXProject "CropDashboard" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07103D9B2FB6F304007D2360;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 07103DA52FB6F304007D2360 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07103DA32FB6F304007D2360 /* CropDashboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07103DA22FB6F304007D2360 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07ED73BB2FE2C0E700F6DD9F /* zones.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07103DA02FB6F304007D2360 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07583DC52FDBE86F0022930C /* HealthDistributionChart.swift in Sources */,
+				07583DCD2FDC03530022930C /* CropHealthResponse.swift in Sources */,
+				07F2C0652FBE36A100970A26 /* DashboardView.swift in Sources */,
+				07F2C0642FBE369800970A26 /* ZoneDetailView.swift in Sources */,
+				07ED73B82FE2959B00F6DD9F /* ARFarmView.swift in Sources */,
+				07F2C0672FBE36AE00970A26 /* Zone.swift in Sources */,
+				07ED739F2FDFA67500F6DD9F /* FarmCardView.swift in Sources */,
+				07F2C0612FBE366F00970A26 /* ZoneCardView.swift in Sources */,
+				07ED739D2FDFA64900F6DD9F /* FarmOverviewView.swift in Sources */,
+				07ED73AF2FE268C800F6DD9F /* ARCoordinator.swift in Sources */,
+				07F2C0622FBE367600970A26 /* DashboardViewModel.swift in Sources */,
+				07ED73A62FE008A300F6DD9F /* ARViewContainer.swift in Sources */,
+				07F2C0662FBE36A700970A26 /* DataService.swift in Sources */,
+				071D8E17300425F00027669F /* LabelCardRenderer.swift in Sources */,
+				07ED739B2FDFA52D00F6DD9F /* Farm.swift in Sources */,
+				079DF4092FFF7DBA002088E7 /* ARCoordinatorHolder.swift in Sources */,
+				07583DBE2FD7DF760022930C /* CropManager.swift in Sources */,
+				07391FA52FC555DE002C0C19 /* MapView.swift in Sources */,
+				07ED73A82FE008BF00F6DD9F /* ZoneEntity.swift in Sources */,
+				079DF4072FFF7CE2002088E7 /* PolygonTriangulator.swift in Sources */,
+				07583DC02FD7DF900022930C /* AddCropView.swift in Sources */,
+				07583DC72FDBE8870022930C /* FarmTrendChart.swift in Sources */,
+				07ED73BA2FE2B23400F6DD9F /* Crop.swift in Sources */,
+				8908464918A145DB9FF8504E /* CropRowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		07103DAD2FB6F306007D2360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07103DAE2FB6F306007D2360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07103DB02FB6F306007D2360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera for augmented reality farm mapping and zone detection.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Divine.CropDashboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07103DB12FB6F306007D2360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera for augmented reality farm mapping and zone detection.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Divine.CropDashboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07103D9F2FB6F304007D2360 /* Build configuration list for PBXProject "CropDashboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07103DAD2FB6F306007D2360 /* Debug */,
+				07103DAE2FB6F306007D2360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07103DAF2FB6F306007D2360 /* Build configuration list for PBXNativeTarget "CropDashboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07103DB02FB6F306007D2360 /* Debug */,
+				07103DB12FB6F306007D2360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07103D9C2FB6F304007D2360 /* Project object */;
+}

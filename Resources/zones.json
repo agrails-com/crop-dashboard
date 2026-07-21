@@ -1,0 +1,175 @@
+[
+  {
+    "id": "Z1",
+    "name": "North Field",
+    "cropType": "Maize",
+    "areaHectares": 12.4,
+    "ndvi": 0.72,
+    "moisture": 0.54,
+    "temperature": 21.5,
+    "status": "healthy",
+
+    "latitude": -1.2921,
+    "longitude": 36.8219,
+
+    "history": [0.65, 0.68, 0.70, 0.72],
+
+    "historyDates": [
+      "2026-05-12",
+      "2026-05-19",
+      "2026-05-26",
+      "2026-06-02"
+    ],
+
+    "analytics": {
+      "trend": "improving",
+      "ndviChange": 0.07,
+      "ndviChangePercent": 10.8,
+      "moistureStatus": "adequate",
+      "healthScore": 66,
+      "alertLevel": "none",
+      "recommendation": "Continue routine monitoring"
+    },
+
+    "arPosition": {
+      "x": 0,
+      "y": 0,
+      "width": 0.15,
+      "height": 0.10
+    },
+
+    "arBoundary": [
+      { "x": 0.1491, "y": 0.2576 },
+      { "x": 0.1284, "y": 0.4109 },
+      { "x": 0.1469, "y": 0.4599 },
+      { "x": 0.1812, "y": 0.4848 },
+      { "x": 0.2026, "y": 0.5187 },
+      { "x": 0.2739, "y": 0.5258 },
+      { "x": 0.2960, "y": 0.5036 },
+      { "x": 0.3317, "y": 0.4884 },
+      { "x": 0.4051, "y": 0.4804 },
+      { "x": 0.4322, "y": 0.4893 },
+      { "x": 0.4971, "y": 0.4563 },
+      { "x": 0.5171, "y": 0.4251 },
+      { "x": 0.5193, "y": 0.4011 },
+      { "x": 0.5086, "y": 0.3654 },
+      { "x": 0.5157, "y": 0.2843 },
+      { "x": 0.4971, "y": 0.2496 },
+      { "x": 0.3944, "y": 0.2121 },
+      { "x": 0.2290, "y": 0.1756 },
+      { "x": 0.1805, "y": 0.1988 }
+    ]
+  },
+
+
+  {
+    "id": "Z2",
+    "name": "South Field",
+    "cropType": "Beans",
+    "areaHectares": 8.1,
+    "ndvi": 0.41,
+    "moisture": 0.31,
+    "temperature": 22.1,
+    "status": "warning",
+
+    "latitude": -1.2925,
+    "longitude": 36.8220,
+
+    "history": [0.60, 0.55, 0.48, 0.41],
+
+    "historyDates": [],
+
+    "analytics": {
+      "trend": "declining",
+      "ndviChange": -0.19,
+      "ndviChangePercent": 25.5,
+      "moistureStatus": "low",
+      "healthScore": 37,
+      "alertLevel": "medium",
+      "recommendation": "Increase irrigation monitoring"
+    },
+
+    "arPosition": {
+      "x": 0,
+      "y": 0,
+      "width": 0.15,
+      "height": 0.10
+    },
+
+    "arBoundary": [
+      { "x": 0.1990, "y": 0.5455 },
+      { "x": 0.1897, "y": 0.5793 },
+      { "x": 0.2026, "y": 0.6257 },
+      { "x": 0.2097, "y": 0.7371 },
+      { "x": 0.2261, "y": 0.7843 },
+      { "x": 0.3595, "y": 0.8378 },
+      { "x": 0.3873, "y": 0.8396 },
+      { "x": 0.4529, "y": 0.8636 },
+      { "x": 0.4650, "y": 0.8583 },
+      { "x": 0.4907, "y": 0.7852 },
+      { "x": 0.4986, "y": 0.7299 },
+      { "x": 0.4922, "y": 0.6239 },
+      { "x": 0.4558, "y": 0.5080 },
+      { "x": 0.4058, "y": 0.4964 },
+      { "x": 0.3331, "y": 0.5000 },
+      { "x": 0.3067, "y": 0.5125 },
+      { "x": 0.2825, "y": 0.5437 }
+    ]
+  },
+
+
+  {
+    "id": "Z3",
+    "name": "East Field",
+    "cropType": "Maize",
+    "areaHectares": 10.7,
+    "ndvi": 0.28,
+    "moisture": 0.25,
+    "temperature": 23.0,
+    "status": "critical",
+
+    "latitude": -1.2930,
+    "longitude": 36.8228,
+
+    "history": [0.50, 0.42, 0.35, 0.28],
+
+    "historyDates": [],
+
+    "analytics": {
+      "trend": "declining",
+      "ndviChange": -0.22,
+      "ndviChangePercent": 33.3,
+      "moistureStatus": "poor",
+      "healthScore": 25,
+      "alertLevel": "high",
+      "recommendation": "Inspect crop stress immediately"
+    },
+
+    "arPosition": {
+      "x": 0,
+      "y": 0,
+      "width": 0.15,
+      "height": 0.10
+    },
+
+    "arBoundary": [
+      { "x": 0.5421, "y": 0.4207 },
+      { "x": 0.5264, "y": 0.4492 },
+      { "x": 0.4886, "y": 0.4750 },
+      { "x": 0.4757, "y": 0.5036 },
+      { "x": 0.5100, "y": 0.6337 },
+      { "x": 0.5178, "y": 0.7406 },
+      { "x": 0.6127, "y": 0.7977 },
+      { "x": 0.6419, "y": 0.8307 },
+      { "x": 0.7118, "y": 0.8440 },
+      { "x": 0.7625, "y": 0.8396 },
+      { "x": 0.7710, "y": 0.8271 },
+      { "x": 0.7710, "y": 0.7950 },
+      { "x": 0.7097, "y": 0.6337 },
+      { "x": 0.6940, "y": 0.5704 },
+      { "x": 0.6676, "y": 0.5258 },
+      { "x": 0.6412, "y": 0.4421 },
+      { "x": 0.6077, "y": 0.4144 }
+    ]
+  }
+]
