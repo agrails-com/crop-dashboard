@@ -126,7 +126,7 @@ struct DashboardView: View {
             ForEach(cropManager.crops) { crop in
               CropRowView(
                 crop: crop,
-                zoneName: viewModel.zones.first(where: { $0.id == crop.zoneID })?.name,
+                linkedZone: viewModel.zones.first(where: { $0.id == crop.zoneID }),
                 onEdit: { editingCrop = crop }
               ) {
                 if let index = cropManager.crops.firstIndex(where: { $0.id == crop.id }) {

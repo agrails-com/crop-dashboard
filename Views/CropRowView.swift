@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CropRowView: View {
   let crop: Crop
-  let zoneName: String?
+  let linkedZone: Zone?
   let onEdit: () -> Void
   let onDelete: () -> Void
 
@@ -23,10 +23,22 @@ struct CropRowView: View {
         .font(.caption)
         .foregroundColor(.secondary)
 
-        if let zoneName {
-          Text("Linked to \(zoneName)")
-            .font(.caption)
-            .foregroundColor(.blue)
+        if let linkedZone {
+          NavigationLink(value: DashboardRoute.zoneDetail(linkedZone.id)) {
+            HStack(spacing: 4) {
+              Circle()
+                .fill(statusColor(linkedZone.status))
+                .frame(width: 8, height: 8)
+                .accessibilityLabel("\(linkedZone.status.displayName) status")
+
+              Text("\(linkedZone.name) · \(linkedZone.status.displayName)")
+                .font(.caption)
+
+              Image(systemName: trendIcon(linkedZone.analytics.trend).systemName)
+                .font(.caption)
+                .foregroundColor(trendIcon(linkedZone.analytics.trend).color)
+            }
+          }
         }
       }
 
@@ -54,6 +66,28 @@ struct CropRowView: View {
     ) {
       Button("Delete", role: .destructive, action: onDelete)
       Button("Cancel", role: .cancel) {}
+    }
+  }
+
+  private func statusColor(_ status: ZoneStatus) -> Color {
+    switch status {
+    case .healthy:
+      return .green
+    case .warning:
+      return .orange
+    case .critical:
+      return .red
+    }
+  }
+
+  private func trendIcon(_ trend: String) -> (systemName: String, color: Color) {
+    switch trend.lowercased() {
+    case "improving":
+      return ("arrow.up.circle.fill", .green)
+    case "declining":
+      return ("arrow.down.circle.fill", .red)
+    default:
+      return ("arrow.right.circle.fill", .gray)
     }
   }
 }
