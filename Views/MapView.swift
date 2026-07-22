@@ -32,6 +32,7 @@ struct MapView: View {
                   .stroke(.white, lineWidth: 2)
               )
               .shadow(radius: 4)
+              .accessibilityLabel("\(zone.status.displayName) status")
 
             Text(zone.name)
               .font(.caption2)

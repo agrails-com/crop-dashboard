@@ -32,6 +32,7 @@ struct ZoneCardView: View {
           width: 20,
           height: 20
         )
+        .accessibilityLabel("\(zone.status.displayName) status")
 
     }
 

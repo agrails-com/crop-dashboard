@@ -18,6 +18,7 @@ final class DashboardViewModel: ObservableObject {
   func loadData() async {
 
     loading = true
+    errorMessage = nil
 
     do {
 

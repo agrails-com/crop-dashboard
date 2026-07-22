@@ -18,7 +18,8 @@ final class CropManager: ObservableObject {
     name: String,
     type: String,
     area: Double,
-    date: Date
+    date: Date,
+    zoneID: String? = nil
   ) {
 
     let crop = Crop(
@@ -26,8 +27,8 @@ final class CropManager: ObservableObject {
       name: name,
       variety: type,
       plantingDate: date,
-      areaHectares: area
-
+      areaHectares: area,
+      zoneID: zoneID
     )
 
     crops.append(crop)
@@ -40,6 +41,15 @@ final class CropManager: ObservableObject {
   ) {
 
     crops.remove(atOffsets: offsets)
+
+    save()
+  }
+
+  func updateCrop(_ updated: Crop) {
+
+    guard let index = crops.firstIndex(where: { $0.id == updated.id }) else { return }
+
+    crops[index] = updated
 
     save()
   }

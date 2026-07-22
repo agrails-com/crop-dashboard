@@ -11,6 +11,7 @@ enum DashboardRoute: Hashable {
 struct DashboardView: View {
   @ObservedObject var viewModel: DashboardViewModel
   @StateObject private var cropManager = CropManager()
+  @State private var editingCrop: Crop?
 
   var body: some View {
 
@@ -22,6 +23,68 @@ struct DashboardView: View {
 
           Text("Agrails Dashboard")
             .font(.largeTitle.bold())
+
+          if viewModel.loading {
+            ProgressView("Loading farm data…")
+              .padding()
+          }
+
+          if let errorMessage = viewModel.errorMessage {
+            VStack(spacing: 8) {
+              Text("Couldn't load farm data")
+                .font(.headline)
+
+              Text(errorMessage)
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .multilineTextAlignment(.center)
+
+              Button("Retry") {
+                Task { await viewModel.loadData() }
+              }
+              .buttonStyle(.borderedProminent)
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(.thinMaterial)
+            .cornerRadius(15)
+          }
+
+          if !attentionZones.isEmpty {
+            VStack(alignment: .leading, spacing: 10) {
+              Text("Needs Attention")
+                .font(.title2.bold())
+
+              ForEach(attentionZones) { zone in
+                NavigationLink(value: DashboardRoute.zoneDetail(zone.id)) {
+                  HStack {
+                    VStack(alignment: .leading, spacing: 2) {
+                      Text(zone.name)
+                        .font(.headline)
+
+                      Text(zone.analytics.recommendation)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    }
+
+                    Spacer()
+
+                    Text(zone.analytics.alertLevel.capitalized)
+                      .font(.caption.bold())
+                      .padding(.horizontal, 10)
+                      .padding(.vertical, 4)
+                      .background(alertColor(zone.analytics.alertLevel).opacity(0.2))
+                      .foregroundColor(alertColor(zone.analytics.alertLevel))
+                      .cornerRadius(8)
+                  }
+                  .padding()
+                  .background(.thinMaterial)
+                  .cornerRadius(15)
+                }
+              }
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+          }
 
           if let farm = viewModel.farms.first {
             NavigationLink(value: DashboardRoute.farmOverview(farm.id)) {
@@ -50,13 +113,22 @@ struct DashboardView: View {
             Label("AR Field View", systemImage: "arkit")
           }
 
-          if !cropManager.crops.isEmpty {
-            Text("My Crops")
-              .font(.title2.bold())
-              .frame(maxWidth: .infinity, alignment: .leading)
+          Text("My Crops")
+            .font(.title2.bold())
+            .frame(maxWidth: .infinity, alignment: .leading)
 
+          if cropManager.crops.isEmpty {
+            Text("No crops added yet. Tap \"Add Crop\" below to get started.")
+              .font(.subheadline)
+              .foregroundColor(.secondary)
+              .frame(maxWidth: .infinity, alignment: .leading)
+          } else {
             ForEach(cropManager.crops) { crop in
-              CropRowView(crop: crop) {
+              CropRowView(
+                crop: crop,
+                zoneName: viewModel.zones.first(where: { $0.id == crop.zoneID })?.name,
+                onEdit: { editingCrop = crop }
+              ) {
                 if let index = cropManager.crops.firstIndex(where: { $0.id == crop.id }) {
                   cropManager.deleteCrop(at: IndexSet(integer: index))
                 }
@@ -72,6 +144,12 @@ struct DashboardView: View {
       }
       .task {
         await viewModel.loadData()
+      }
+      .refreshable {
+        await viewModel.loadData()
+      }
+      .sheet(item: $editingCrop) { crop in
+        AddCropView(manager: cropManager, zones: viewModel.zones, editingCrop: crop)
       }
       .navigationDestination(for: DashboardRoute.self) { route in
 
@@ -103,9 +181,24 @@ struct DashboardView: View {
 
         case .addCrop:
 
-          AddCropView(manager: cropManager)
+          AddCropView(manager: cropManager, zones: viewModel.zones)
         }
       }
+    }
+  }
+
+  private var attentionZones: [Zone] {
+    viewModel.zones.filter { $0.analytics.alertLevel.lowercased() != "none" }
+  }
+
+  private func alertColor(_ level: String) -> Color {
+    switch level.lowercased() {
+    case "high":
+      return .red
+    case "medium":
+      return .orange
+    default:
+      return .yellow
     }
   }
 }
